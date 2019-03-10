@@ -67,8 +67,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Parking.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Parking.xaml.cs">
+      <DependentUpon>Parking.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Planner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -103,6 +110,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="yardPlanner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imageSources\green.png" />
+    <Resource Include="imageSources\ls.png" />
+    <Resource Include="imageSources\m.png" />
+    <Resource Include="imageSources\red.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
