@@ -28,45 +28,12 @@ namespace yardPlaner
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Microsoft.Win32.OpenFileDialog openFileDlg = new Microsoft.Win32.OpenFileDialog();
-            // Set filter for file extension and default file extension  
-            openFileDlg.DefaultExt = ".txt";
-            openFileDlg.Filter = "Text documents (.csv)|*.csv";
-
-            // Set initial directory    
-            openFileDlg.InitialDirectory = @"C:\Users\Meng\Desktop\yard";
-
-            // Launch OpenFileDialog by calling ShowDialog method
-            Nullable<bool> file = openFileDlg.ShowDialog();
-
-            // Get the selected file name and display in a TextBox.
-            // Load content of file in a TextBlock
-            
-                FileNameTextBox.Text = openFileDlg.FileName;
-                //TextBlock1.Text = System.IO.File.ReadAllText(openFileDlg.FileName);
-            if (file == true)
-            {
-                List<List<Car>> result = Planner.Planner.computeSlots(openFileDlg.FileName);
-                List<Car> parkingLot = result[0];
-                List<Car> noneSlotCars = result[1];
-
-                string[] sizeName = { "Large", "Medium", "Small" };
-                for (int i = 0; i < parkingLot.Capacity; i++)
-                {
-                    Car car = parkingLot[i];
-                    if (!car.checkEmptyState())
-                        TextBlock1.Text +="Position: " + i + " - car id: " + car.getId() + ", size: " + sizeName[car.getSize()];
-                    else
-                        TextBlock1.Text += "Position " + i + " is empty";
-                }
-
-                foreach (Car car in noneSlotCars)
-                {
-                    TextBlock1.Text += "No slot avaliable for car id: " + car.getId();
-                }
-               
-            }
-
+            this.Content = new Main();
         }
-}
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.MainWindow.Close();
+        }
+    }
 }
