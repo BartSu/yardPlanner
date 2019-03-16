@@ -13,6 +13,5 @@ namespace yardPlaner
     /// </summary>
     public partial class App : Application
     {
-
     }
 }
