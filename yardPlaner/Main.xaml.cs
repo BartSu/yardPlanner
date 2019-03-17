@@ -11,7 +11,7 @@ namespace yardPlaner
     /// </summary>
     /// 
 
-        static class glbV
+    static class glbV
     {
         public static int[] smallslot = new int[30];
         public static int[] middleslot = new int[40];
@@ -44,44 +44,52 @@ namespace yardPlaner
             TextBox.Text = System.IO.File.ReadAllText(openFileDlg.FileName);
             if (file == true)
             {
-                List<List<Car>> result = Planner.Planner.computeSlots(openFileDlg.FileName);
-                List<Car> parkingLot = result[0];
-                List<Car> noneSlotCars = result[1];
+                TextBlock1.Text = "";
+                try
+                {
+                    List<List<Car>> result = Planner.Planner.computeSlots(openFileDlg.FileName);
 
-                string[] sizeName = { "Large", "Medium", "Small" };
-                
-                
-                for (int i = 0; i < parkingLot.Capacity; i++)
-                {
-                    Car car = parkingLot[i];
-                    
-                    if (!car.checkEmptyState())
-                        TextBlock1.Text +="Position: " + i + " - car id: " + car.getId() + ", size: " + car.getSize();
-                    else
-                        TextBlock1.Text += "Position " + i + " is empty";
-                }
+                    List<Car> parkingLot = result[0];
+                    List<Car> noneSlotCars = result[1];
 
-                for (int l = 0; l < glbV.largeslot.Length; l++)
-                {
-                    glbV.largeslot[l] = 2 - parkingLot[l].getSize();
-                }
-                for (int m = 0; m < glbV.middleslot.Length; m++)
-                {
-                    glbV.middleslot[m] = 2 - parkingLot[glbV.largeslot.Length + m].getSize();
-                }
-                for (int s = 0; s < glbV.smallslot.Length; s++)
-                {
-                    glbV.smallslot[s] = 2 - parkingLot[glbV.largeslot.Length + glbV.middleslot.Length + s].getSize();
-                }
+                    string[] sizeName = { "Large", "Medium", "Small" };
 
-                foreach (Car car in noneSlotCars)
-                {
-                    TextBlock1.Text += "No slot avaliable for car id: " + car.getId();
-                }
+                    for (int i = 0; i < parkingLot.Capacity; i++)
+                    {
+                        Car car = parkingLot[i];
 
+                        if (!car.checkEmptyState())
+                            TextBlock1.Text += "Position: " + i + " - car id: " + car.getId() + ", size: " + sizeName[car.getSize()] + "\r\n";
+                        else
+                            TextBlock1.Text += "Position " + i + " is empty" + "\r\n";
+                    }
+
+                    for (int l = 0; l < glbV.largeslot.Length; l++)
+                    {
+                        glbV.largeslot[l] = 2 - parkingLot[l].getSize();
+                    }
+                    for (int m = 0; m < glbV.middleslot.Length; m++)
+                    {
+                        glbV.middleslot[m] = 2 - parkingLot[glbV.largeslot.Length + m].getSize();
+                    }
+                    for (int s = 0; s < glbV.smallslot.Length; s++)
+                    {
+                        glbV.smallslot[s] = 2 - parkingLot[glbV.largeslot.Length + glbV.middleslot.Length + s].getSize();
+                    }
+
+                    foreach (Car car in noneSlotCars)
+                    {
+                        TextBlock1.Text += "No slot avaliable for car id: " + car.getId();
+                    }
+
+                    Parking win = new Parking();
+                    win.Show();
+                }
+                catch (Exception)
+                {
+                    return;
+                }
             }
-            Parking win = new Parking();
-            win.Show();
         }
     }
 }
