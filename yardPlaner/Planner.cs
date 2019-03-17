@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
+using System.Windows;
 
 namespace Planner
 {
@@ -130,88 +132,101 @@ namespace Planner
             capacity[(int)CarSize.Large] = (int)ParkingLotCapacity.LargeCar;
             capacity[(int)CarSize.Medium] = (int)ParkingLotCapacity.MediumCar;
             capacity[(int)CarSize.Small] = (int)ParkingLotCapacity.SmallCar;
-
-            string line;
-            while ((line = file.ReadLine()) != null)
+            try
             {
-                Car car;
-                string[] split_line = line.Split(',');
-
-                //Identify the input, the car size in the csv should be L/M/S.               
-                if (split_line[1].Equals("L")) //for large cars.
+                if (new FileInfo(csvPath).Length <= 1)
                 {
-                    car = new Car(split_line[0], (int)CarSize.Large);
-
-                    //Assign a parking slot. Large car can only park in L slots.
-                    if (capacity[(int)CarSize.Large] > 0)
-                    {
-                        int position = (int)ParkingLotCapacity.LargeCar - capacity[(int)CarSize.Large];
-                        parkingLot[position] = car;
-                        capacity[(int)CarSize.Large]--;
-                    }
-                    else
-                    {
-                        noneSlotCars.Add(car);
-                    }
-                }
-                else if (split_line[1].Equals("M")) //for medium cars.
-                {
-                    car = new Car(split_line[0], (int)CarSize.Medium);
-
-                    //Assign a parking slot. Med car can park in L and M slots.
-                    if (capacity[(int)CarSize.Medium] > 0)
-                    {
-                        int position = (int)ParkingLotCapacity.MediumCar - capacity[(int)CarSize.Medium]
-                                        + (int)ParkingLotCapacity.LargeCar;
-                        parkingLot[position] = car;
-                        capacity[(int)CarSize.Medium]--;
-                    }
-                    else if (capacity[(int)CarSize.Large] > 0)
-                    {
-                        int position = (int)ParkingLotCapacity.LargeCar - capacity[(int)CarSize.Large];
-                        parkingLot[position] = car;
-                        capacity[(int)CarSize.Large]--;
-                    }
-                    else
-                    {
-                        noneSlotCars.Add(car);
-                    }
-                }
-                else if (split_line[1].Equals("S")) //for small cars.
-                {
-                    car = new Car(split_line[0], (int)CarSize.Small);
-
-                    //Assign a parking slot. Small car can park in all slots.
-                    if (capacity[(int)CarSize.Small] > 0)
-                    {
-                        int position = (int)ParkingLotCapacity.SmallCar - capacity[(int)CarSize.Small]
-                                         + (int)ParkingLotCapacity.MediumCar
-                                         + (int)ParkingLotCapacity.LargeCar;
-                        parkingLot[position] = car;
-                        capacity[(int)CarSize.Small]--;
-                    }
-                    else if (capacity[(int)CarSize.Medium] > 0)
-                    {
-                        int position = (int)ParkingLotCapacity.MediumCar - capacity[(int)CarSize.Medium]
-                                        + (int)ParkingLotCapacity.LargeCar;
-                        parkingLot[position] = car;
-                        capacity[(int)CarSize.Medium]--;
-                    }
-                    else if (capacity[(int)CarSize.Large] > 0)
-                    {
-                        int position = (int)ParkingLotCapacity.LargeCar - capacity[(int)CarSize.Large];
-                        parkingLot[position] = car;
-                        capacity[(int)CarSize.Large]--;
-                    }
-                    else
-                    {
-                        noneSlotCars.Add(car);
-                    }
+                    throw new Exception("The file does not have any content!");
                 }
                 else
                 {
-                    throw new Exception("unaccepted car size");
+                    string line;
+                    while ((line = file.ReadLine()) != null)
+                    {
+                        Car car;
+                        string[] split_line = line.Split(',');
+
+                        //Identify the input, the car size in the csv should be L/M/S.               
+                        if (split_line[1].Equals("L")) //for large cars.
+                        {
+                            car = new Car(split_line[0], (int)CarSize.Large);
+
+                            //Assign a parking slot. Large car can only park in L slots.
+                            if (capacity[(int)CarSize.Large] > 0)
+                            {
+                                int position = (int)ParkingLotCapacity.LargeCar - capacity[(int)CarSize.Large];
+                                parkingLot[position] = car;
+                                capacity[(int)CarSize.Large]--;
+                            }
+                            else
+                            {
+                                noneSlotCars.Add(car);
+                            }
+                        }
+                        else if (split_line[1].Equals("M")) //for medium cars.
+                        {
+                            car = new Car(split_line[0], (int)CarSize.Medium);
+
+                            //Assign a parking slot. Med car can park in L and M slots.
+                            if (capacity[(int)CarSize.Medium] > 0)
+                            {
+                                int position = (int)ParkingLotCapacity.MediumCar - capacity[(int)CarSize.Medium]
+                                                + (int)ParkingLotCapacity.LargeCar;
+                                parkingLot[position] = car;
+                                capacity[(int)CarSize.Medium]--;
+                            }
+                            else if (capacity[(int)CarSize.Large] > 0)
+                            {
+                                int position = (int)ParkingLotCapacity.LargeCar - capacity[(int)CarSize.Large];
+                                parkingLot[position] = car;
+                                capacity[(int)CarSize.Large]--;
+                            }
+                            else
+                            {
+                                noneSlotCars.Add(car);
+                            }
+                        }
+                        else if (split_line[1].Equals("S")) //for small cars.
+                        {
+                            car = new Car(split_line[0], (int)CarSize.Small);
+
+                            //Assign a parking slot. Small car can park in all slots.
+                            if (capacity[(int)CarSize.Small] > 0)
+                            {
+                                int position = (int)ParkingLotCapacity.SmallCar - capacity[(int)CarSize.Small]
+                                                 + (int)ParkingLotCapacity.MediumCar
+                                                 + (int)ParkingLotCapacity.LargeCar;
+                                parkingLot[position] = car;
+                                capacity[(int)CarSize.Small]--;
+                            }
+                            else if (capacity[(int)CarSize.Medium] > 0)
+                            {
+                                int position = (int)ParkingLotCapacity.MediumCar - capacity[(int)CarSize.Medium]
+                                                + (int)ParkingLotCapacity.LargeCar;
+                                parkingLot[position] = car;
+                                capacity[(int)CarSize.Medium]--;
+                            }
+                            else if (capacity[(int)CarSize.Large] > 0)
+                            {
+                                int position = (int)ParkingLotCapacity.LargeCar - capacity[(int)CarSize.Large];
+                                parkingLot[position] = car;
+                                capacity[(int)CarSize.Large]--;
+                            }
+                            else
+                            {
+                                noneSlotCars.Add(car);
+                            }
+                        }
+                        else
+                        {
+                            throw new Exception("There is something wrong with the input file, please check the format again!");
+                        }
+                    }
                 }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
             List<List<Car>> ret = new List<List<Car>>();
