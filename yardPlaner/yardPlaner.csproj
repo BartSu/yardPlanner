@@ -112,21 +112,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="parkingLot.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="benz.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="yardPlanner.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="imageSources\green.png" />
     <Resource Include="imageSources\large.png" />
     <Resource Include="imageSources\ls.png" />
     <Resource Include="imageSources\m.png" />
     <Resource Include="imageSources\middle.png" />
     <Resource Include="imageSources\small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imageSources\yardPlanner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imageSources\benz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imageSources\parkingLot.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

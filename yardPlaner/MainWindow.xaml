@@ -14,7 +14,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Image x:Name="背景" HorizontalAlignment="Left" Width="1024" Source="parkingLot.jpg" Margin="0,-24,0,-26"/>
+        <Image x:Name="背景" HorizontalAlignment="Left" Width="1024" Margin="0,-24,0,-26" Source="imageSources/parkingLot.jpg"/>
         <Rectangle x:Name="rectangle" HorizontalAlignment="Left" Height="68" Margin="391,454,0,0" VerticalAlignment="Top" Width="236" RenderTransformOrigin="0.5,0.5" RadiusY="40.546" RadiusX="40.546">
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
