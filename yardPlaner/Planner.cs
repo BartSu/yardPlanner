@@ -144,6 +144,10 @@ namespace Planner
                     {
                         Car car;
                         string[] split_line = line.Split(',');
+                        if (split_line.Length < 2)
+                        {
+                            throw new Exception("The file format is not correct.");
+                        }
 
                         //Identify the input, the car size in the csv should be L/M/S.               
                         if (split_line[1].Equals("L")) //for large cars.
