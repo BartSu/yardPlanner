@@ -44,6 +44,6 @@
             </TextBlock.RenderTransform>
         </TextBlock>
         <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="94" Margin="882,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" FontSize="20" FontFamily="Verdana" Foreground="#FFFBF8F8"><Run Text="Yard Planner"/><LineBreak/><Run Text="停车规划系统"/></TextBlock>
-        <Button x:Name="launch" Content="Button" HorizontalAlignment="Left" Margin="388,458,0,0" VerticalAlignment="Top" Width="234" Height="64" Opacity="0" Click="Button_Click"/>
+        <Button x:Name="launch" Content="Button" HorizontalAlignment="Left" Margin="388,458,0,0" VerticalAlignment="Top" Width="235" Height="64" Opacity="0" Click="Button_Click"/>
     </Grid>
 </Window>
