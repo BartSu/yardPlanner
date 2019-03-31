@@ -13,9 +13,9 @@ namespace yardPlaner
 
     static class glbV
     {
-        public static int[] smallslot = new int[30];
-        public static int[] middleslot = new int[40];
-        public static int[] largeslot = new int[30];
+        public static int[] smallslot = new int[15];
+        public static int[] middleslot = new int[20];
+        public static int[] largeslot = new int[10];
     }
     public partial class Main : Page
     {
@@ -28,20 +28,23 @@ namespace yardPlaner
         {
             Microsoft.Win32.OpenFileDialog openFileDlg = new Microsoft.Win32.OpenFileDialog();
             // Set filter for file extension and default file extension  
-            openFileDlg.DefaultExt = ".txt";
-            openFileDlg.Filter = "Text documents (.csv)|*.csv";
+            openFileDlg.DefaultExt = ".csv";
+            openFileDlg.Filter = "Comma-Separated Values (.csv)|*.csv";
 
             // Set initial directory    
-            openFileDlg.InitialDirectory = @"C:\Users\Meng\Desktop\yard";
+            openFileDlg.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
             // Launch OpenFileDialog by calling ShowDialog method
-            Nullable<bool> file = openFileDlg.ShowDialog();
+            Nullable<bool> file;
+            try
+            {
+                file = openFileDlg.ShowDialog();
+            }
+            catch (Exception)
+            {
+                return;
+            }
 
-            // Get the selected file name and display in a TextBox.
-            // Load content of file in a TextBlock
-
-            //FileNameTextBox.Text = openFileDlg.FileName;
-            TextBox.Text = System.IO.File.ReadAllText(openFileDlg.FileName);
             if (file == true)
             {
                 TextBlock1.Text = "";
@@ -66,20 +69,24 @@ namespace yardPlaner
 
                     for (int l = 0; l < glbV.largeslot.Length; l++)
                     {
-                        glbV.largeslot[l] = 2 - parkingLot[l].getSize();
+                        if (!parkingLot[l].checkEmptyState())
+                            glbV.largeslot[l] = 2 - parkingLot[l].getSize();
+                        else
+                            glbV.largeslot[l] = -1;
                     }
                     for (int m = 0; m < glbV.middleslot.Length; m++)
                     {
-                        glbV.middleslot[m] = 2 - parkingLot[glbV.largeslot.Length + m].getSize();
+                        if (!parkingLot[glbV.largeslot.Length + m].checkEmptyState())
+                            glbV.middleslot[m] = 2 - parkingLot[glbV.largeslot.Length + m].getSize();
+                        else
+                            glbV.middleslot[m] = -1;
                     }
                     for (int s = 0; s < glbV.smallslot.Length; s++)
                     {
-                        glbV.smallslot[s] = 2 - parkingLot[glbV.largeslot.Length + glbV.middleslot.Length + s].getSize();
-                    }
-
-                    foreach (Car car in noneSlotCars)
-                    {
-                        TextBlock1.Text += "No slot avaliable for car id: " + car.getId();
+                        if (!parkingLot[glbV.largeslot.Length + glbV.middleslot.Length + s].checkEmptyState())
+                            glbV.smallslot[s] = 2 - parkingLot[glbV.largeslot.Length + glbV.middleslot.Length + s].getSize();
+                        else
+                            glbV.smallslot[s] = -1;
                     }
 
                     Parking win = new Parking();
@@ -90,6 +97,12 @@ namespace yardPlaner
                     return;
                 }
             }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Classifier classifier = new Classifier();
+            classifier.Show();
         }
     }
 }
