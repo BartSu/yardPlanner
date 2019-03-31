@@ -103,8 +103,6 @@ namespace yardPlaner
                 sw.Close();
             }
 
-            addedCarList.Text += ls_fileNeme;
-
             try
             {
                 List<List<Car>> result = Planner.Planner.computeSlots(ls_fileNeme);
