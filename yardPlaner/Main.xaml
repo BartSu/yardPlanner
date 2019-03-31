@@ -34,6 +34,7 @@
         </Button>
         <Label Content="请选择你需要的处理的csv文件来生成规划的结果图！" HorizontalAlignment="Left" Height="32" Margin="373,580,0,0" VerticalAlignment="Top" Width="292" Background="{x:Null}"/>
         <Image HorizontalAlignment="Left" Height="448" Margin="166,68,0,0" VerticalAlignment="Top" Width="668" Source="imageSources/yardPlanner.jpg"/>
+        <Button Content="根据车辆图片生成规划" HorizontalAlignment="Left" Margin="685,534,0,0" VerticalAlignment="Top" Width="149" Height="46" Click="Button_Click_1"/>
 
     </Grid>
 </Page>

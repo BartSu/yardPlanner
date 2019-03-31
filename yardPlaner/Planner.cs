@@ -63,9 +63,9 @@ namespace Planner
     //Set the initial capacity for each size here.
     enum ParkingLotCapacity
     {
-        LargeCar = 30,
-        MediumCar = 40,
-        SmallCar = 30
+        LargeCar = 10,
+        MediumCar = 20,
+        SmallCar = 15
     }
 
     //Size identifier.
@@ -142,6 +142,11 @@ namespace Planner
                     string line;
                     while ((line = file.ReadLine()) != null)
                     {
+                        if (line.Length == 0)
+                        {
+                            continue;
+                        }
+
                         Car car;
                         string[] split_line = line.Split(',');
                         if (split_line.Length < 2)

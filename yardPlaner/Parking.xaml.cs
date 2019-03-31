@@ -1,16 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace yardPlaner
 {
@@ -18,23 +8,23 @@ namespace yardPlaner
     /// Interaction logic for Parking.xaml
     /// </summary>
     /// 
-    
+
     public partial class Parking : Window
     {
 
-       
+
 
         Image[] smallPlot = new Image[15];
         Image[] middlePlot = new Image[20];
         Image[] largePlot = new Image[10];
 
-        
+
 
 
 
         public Parking()
         {
-           
+
 
             InitializeComponent();
 
@@ -87,10 +77,10 @@ namespace yardPlaner
 
 
 
-           // image1.Source = (ImageSource)Resources["small"];
+            // image1.Source = (ImageSource)Resources["small"];
             //image1.Visibility = Visibility.Visible;
 
-            
+
             show(glbV.smallslot, glbV.middleslot, glbV.largeslot);
         }
 
@@ -99,20 +89,20 @@ namespace yardPlaner
         // middle array represent the middle slot 
         // large array represent the large slot
         // 0 represent small car in it , 1 represent middle car in it , 2 represent large car in it
-        public void show(int []small ,int [] middle,int []large)
+        public void show(int[] small, int[] middle, int[] large)
         {
-           for(int i =0; i <smallPlot.Length; i++)
+            for (int i = 0; i < smallPlot.Length; i++)
             {
                 if (small[i] == 0)
                 {
                     smallPlot[i].Source = (ImageSource)Resources["small"];
-                }else if(small[i] != 0){
+                }
+                else
+                {
                     smallPlot[i].Visibility = Visibility.Collapsed;
                 }
-                
-               
             }
-           for(int i = 0; i<middlePlot.Length; i++)
+            for (int i = 0; i < middlePlot.Length; i++)
             {
                 if (middle[i] == 0)
                 {
@@ -122,12 +112,12 @@ namespace yardPlaner
                 {
                     middlePlot[i].Source = (ImageSource)Resources["middle"];
                 }
-                else if (middle[i] != 0 && middle[i] != 1)
+                else
                 {
-                    middlePlot[i].Source = (ImageSource)Resources["small"];
+                    middlePlot[i].Visibility = Visibility.Collapsed;
                 }
             }
-           for(int i =0; i < largePlot.Length; i++)
+            for (int i = 0; i < largePlot.Length; i++)
             {
                 if (large[i] == 0)
                 {
@@ -141,7 +131,7 @@ namespace yardPlaner
                 {
                     largePlot[i].Source = (ImageSource)Resources["large"];
                 }
-                else if (large[i] != 0 && large[i] != 1 && large[i] != 2)
+                else
                 {
                     largePlot[i].Visibility = Visibility.Collapsed;
                 }
