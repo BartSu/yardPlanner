@@ -11,21 +11,12 @@ namespace yardPlaner
 
     public partial class Parking : Window
     {
-
-
-
         Image[] smallPlot = new Image[15];
         Image[] middlePlot = new Image[20];
         Image[] largePlot = new Image[10];
 
-
-
-
-
         public Parking()
         {
-
-
             InitializeComponent();
 
             smallPlot[0] = image0;
@@ -74,12 +65,8 @@ namespace yardPlaner
             largePlot[8] = image43;
             largePlot[9] = image44;
 
-
-
-
             // image1.Source = (ImageSource)Resources["small"];
             //image1.Visibility = Visibility.Visible;
-
 
             show(glbV.smallslot, glbV.middleslot, glbV.largeslot);
         }
@@ -97,10 +84,6 @@ namespace yardPlaner
                 {
                     smallPlot[i].Source = (ImageSource)Resources["small"];
                 }
-                else
-                {
-                    smallPlot[i].Visibility = Visibility.Collapsed;
-                }
             }
             for (int i = 0; i < middlePlot.Length; i++)
             {
@@ -111,10 +94,6 @@ namespace yardPlaner
                 if (middle[i] == 1)
                 {
                     middlePlot[i].Source = (ImageSource)Resources["middle"];
-                }
-                else
-                {
-                    middlePlot[i].Visibility = Visibility.Collapsed;
                 }
             }
             for (int i = 0; i < largePlot.Length; i++)
@@ -131,14 +110,7 @@ namespace yardPlaner
                 {
                     largePlot[i].Source = (ImageSource)Resources["large"];
                 }
-                else
-                {
-                    largePlot[i].Visibility = Visibility.Collapsed;
-                }
             }
-
-
-
         }
     }
 }

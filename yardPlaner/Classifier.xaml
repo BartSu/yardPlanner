@@ -18,7 +18,9 @@
         <Label Content="ID: " HorizontalAlignment="Left" Margin="51,220,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="carID" HorizontalAlignment="Left" Height="23" Margin="100,222,0,0" TextWrapping="Wrap" Text="N/A" VerticalAlignment="Top" Width="87"/>
         <Border BorderBrush="Blue" BorderThickness="1" CornerRadius="5" Margin="357,35,10,95">
-            <TextBlock x:Name="addedCarList" Margin="6,9,9,9" TextWrapping="Wrap" IsEnabled="False" ScrollViewer.CanContentScroll="True"/>
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <TextBlock x:Name="addedCarList" Margin="6,9,9,9" TextWrapping="Wrap"/>
+            </ScrollViewer>
         </Border>
         <Label Content="Car List" HorizontalAlignment="Left" Margin="357,10,0,0" VerticalAlignment="Top" FontSize="11" Height="25" FontWeight="Bold"/>
 
