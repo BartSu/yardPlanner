@@ -14,23 +14,23 @@
     </Window.Resources>
 
     <Grid x:Name="grdChampions_Copy" HorizontalAlignment="Left" Height="620" VerticalAlignment="Top" Width="1018" Margin="0,0,0,-1.5">
-        <Image x:Name="image" HorizontalAlignment="Left" Height="660" VerticalAlignment="Top" Width="975" Source="imageSources/carbg.png" Margin="45,2,-2,-42"/>
-        <Image x:Name="image0" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="960,90,0,0" />
-        <Image x:Name="image1" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="960,134,0,0" />
-        <Image x:Name="image2" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="960,185,0,0" />
-        <Image x:Name="image3" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="960,230,0,0" />
-        <Image x:Name="image4" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="960,275,0,0" />
-        <Image x:Name="image5" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="960,325,0,0" />
-        <Image x:Name="image6" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="960,370,0,0" />
-        <Image x:Name="image7" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="960,415,0,0" />
-        <Image x:Name="image8" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="960,460,0,0" />
-        <Image x:Name="image9" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="960,505,0,0" />
-        <Image x:Name="image10" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="805,265,0,0" />
-        <Image x:Name="image11" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="805,310,0,0" />
-        <Image x:Name="image12" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="805,355,0,0" />
-        <Image x:Name="image13" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="805,405,0,0" />
-        <Image x:Name="image14" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="805,450,0,0" />
-        <Image x:Name="image15" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="200,560,0,0"  RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image" HorizontalAlignment="Left" Height="679" VerticalAlignment="Bottom" Width="1008" Source="imageSources/carbg.png" Margin="10,-69,0,10"/>
+        <Image x:Name="image0" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="48" Margin="960,55,0,0" />
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="48" Margin="960,89,0,0" />
+        <Image x:Name="image2" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="48" Margin="960,125,0,0" />
+        <Image x:Name="image3" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="48" Margin="960,159,0,0" />
+        <Image x:Name="image4" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="48" Margin="960,195,0,0" />
+        <Image x:Name="image5" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="48" Margin="960,230,0,0" />
+        <Image x:Name="image6" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="48" Margin="960,265,0,0" />
+        <Image x:Name="image7" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="48" Margin="960,301,0,0" />
+        <Image x:Name="image8" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="48" Margin="960,338,0,0" />
+        <Image x:Name="image9" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="48" Margin="960,368,0,0" />
+        <Image x:Name="image10" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="48" Margin="960,405,0,0" />
+        <Image x:Name="image11" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="48" Margin="960,441,0,0" />
+        <Image x:Name="image12" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="48" Margin="960,479,0,0" />
+        <Image x:Name="image13" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="48" Margin="960,516,0,0" />
+        <Image x:Name="image14" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="48" Margin="960,553,0,0" />
+        <Image x:Name="image15" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="65" Margin="306,545,0,0"  RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -40,7 +40,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="image16" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="255,560,0,0"  RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image16" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="65" Margin="355,545,0,0"  RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -50,7 +50,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="image17" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="315,560,0,0"  RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image17" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="65" Margin="407,545,0,0"  RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -60,7 +60,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="image18" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="370,560,0,0"  RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image18" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="65" Margin="457,545,0,0"  RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -70,7 +70,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="image19" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="425,560,0,0"  RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image19" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="65" Margin="510,545,0,0"  RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -80,7 +80,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="image20" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="480,560,0,0"  RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image20" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="65" Margin="560,545,0,0"  RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -90,7 +90,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="image21" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="540,560,0,0"  RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image21" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="65" Margin="615,545,0,0"  RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -100,7 +100,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="image22" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="595,560,0,0"  RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image22" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="65" Margin="665,545,0,0"  RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -110,7 +110,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="image23" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="655,560,0,0"  RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image23" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="65" Margin="720,545,0,0"  RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -120,7 +120,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="image24" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="710,560,0,0"  RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image24" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="65" Margin="765,545,0,0"  RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -130,7 +130,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="image25" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="200,35,0,0"  RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image25" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="65" Margin="306,55,0,0"  RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -140,7 +140,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="image26" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="255,35,0,0"  RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image26" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="65" Margin="355,55,0,0"  RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -150,7 +150,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="image27" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="315,35,0,0"  RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image27" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="65" Margin="407,55,0,0"  RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -160,7 +160,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="image28" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="370,35,0,0"  RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image28" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="65" Margin="457,55,0,0"  RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -170,7 +170,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="image29" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="425,35,0,0"  RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image29" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="65" Margin="510,55,0,0"  RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -180,7 +180,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="image30" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="480,35,0,0"  RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image30" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="65" Margin="560,55,0,0"  RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -190,7 +190,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="image31" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="540,35,0,0"  RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image31" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="65" Margin="615,55,0,0"  RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -200,7 +200,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="image32" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="595,35,0,0"  RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image32" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="65" Margin="665,55,0,0"  RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -210,7 +210,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="image33" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="655,35,0,0"  RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image33" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="65" Margin="720,55,0,0"  RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -220,7 +220,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="image34" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="40" Margin="710,35,0,0"  RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image34" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="65" Margin="765,35,0,0"  RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -230,7 +230,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="image35" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="60" Margin="70,350,0,0"  RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image35" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="120" Margin="308,285,0,0"  RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -240,7 +240,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="image36" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="60" Margin="135,350,0,0"  RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image36" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="120" Margin="358,285,0,0"  RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -250,7 +250,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="image37" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="60" Margin="215,350,0,0"  RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image37" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="120" Margin="408,285,0,0"  RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -260,7 +260,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="image38" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="60" Margin="280,350,0,0"  RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image38" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="120" Margin="463,285,0,0"  RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -270,7 +270,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="image39" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="60" Margin="350,350,0,0"  RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image39" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="120" Margin="513,285,0,0"  RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -280,7 +280,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="image40" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="60" Margin="415,350,0,0"  RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image40" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="120" Margin="568,285,0,0"  RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -290,7 +290,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="image41" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="60" Margin="500,350,0,0"  RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image41" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="120" Margin="620,285,0,0"  RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -300,7 +300,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="image42" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="60" Margin="565,350,0,0"  RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image42" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="120" Margin="670,285,0,0"  RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -310,7 +310,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="image43" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="60" Margin="640,350,0,0"  RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image43" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="120" Margin="720,285,0,0"  RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -320,7 +320,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="image44" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="60" Margin="705,350,0,0"  RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image44" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="120" Margin="775,285,0,0"  RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

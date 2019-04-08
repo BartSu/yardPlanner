@@ -34,6 +34,7 @@ namespace yardPlaner
             smallPlot[12] = image12;
             smallPlot[13] = image13;
             smallPlot[14] = image14;
+
             middlePlot[0] = image15;
             middlePlot[1] = image16;
             middlePlot[2] = image17;
@@ -54,6 +55,7 @@ namespace yardPlaner
             middlePlot[17] = image32;
             middlePlot[18] = image33;
             middlePlot[19] = image34;
+
             largePlot[0] = image35;
             largePlot[1] = image36;
             largePlot[2] = image37;
